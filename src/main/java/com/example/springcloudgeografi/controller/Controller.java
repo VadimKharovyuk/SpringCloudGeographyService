@@ -21,6 +21,7 @@ public class Controller {
         Collections.shuffle(questions);
         return questions.stream().limit(amount).collect(Collectors.toList());
     }
+
 @GetMapping("/all")
     List<Question> questionList (){
       return   questionRepo.findAll();
